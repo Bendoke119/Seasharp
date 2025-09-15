@@ -145,9 +145,11 @@ namespace fela1
                 }
                 i++;
             }
-            Console.WriteLine("A legkissebb szám: " + min);*/
+            Console.WriteLine("A legkissebb szám: " + min);
 
+            */
             int[] szamok = { 12, 5, 8, -3 };
+            /*
             int min = szamok[0];
             int i = 1;
             do
@@ -159,6 +161,65 @@ namespace fela1
                 i++;
             }while (i < szamok.Length);
             Console.WriteLine("A legkissebb szám: " + min);
+
+            int min1 = szamok.Min();
+
+            Console.WriteLine($"A legkissebb szám {min1}");
+
+            int max = szamok[0];
+            
+            
+            for (int i2=1; i2 < szamok.Length; i2++)
+            {
+                if (szamok[1] > max)
+                {
+                    max = szamok[1];
+                }
+            }
+            Console.WriteLine($"A legnagyobb szám: {max}");
+
+            int max = szamok[0];
+
+            foreach (int szam in szamok)
+            {
+                if (szam > max)
+                {
+                    max = szam;
+                }
+            }
+            Console.WriteLine($"A legnagyobb szám: {max}");
+
+            int max = szamok[0];
+            int i = 1;
+            while (i < szamok.Length)
+            {
+                if (szamok[i] > max)
+                {
+                    max = szamok[i];
+                }
+                i++;
+            }
+            Console.WriteLine($"A legnagyobb szám: {max}");*/
+            int max = szamok[0];
+            int i = 1;
+
+            do
+            {
+                if (szamok[i] > max)
+                {
+                    max = szamok[i];
+                }
+                i++;
+            }
+            while (i < szamok.Length);
+
+            Console.WriteLine($"A legnagyobb szám: {max}");
+
+            int max1 = szamok.Max();
+
+            Console.WriteLine($"A legnagyobb szám {max1}");
+
+
 
 
         }
