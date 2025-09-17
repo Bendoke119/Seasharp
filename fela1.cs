@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -147,7 +148,7 @@ namespace fela1
             }
             Console.WriteLine("A legkissebb szám: " + min);
 
-            */
+          
             int[] szamok = { 12, 5, 8, -3 };
             /*
             int min = szamok[0];
@@ -199,7 +200,7 @@ namespace fela1
                 }
                 i++;
             }
-            Console.WriteLine($"A legnagyobb szám: {max}");*/
+            Console.WriteLine($"A legnagyobb szám: {max}");
             int max = szamok[0];
             int i = 1;
 
@@ -219,7 +220,110 @@ namespace fela1
 
             Console.WriteLine($"A legnagyobb szám {max1}");
 
+            List<int> szamok = new List<int> { 4, 8, 15, 16, 23, 42 };
+            int keresett = 16;
+            bool megtalalva = false;
 
+            for (int i = 1; i < szamok.Count; i++)
+            {
+                if (szamok[i] == keresett)
+                {
+                    Console.WriteLine($"A keresett szám: ({keresett}) megtalálva a(z) {i}. indexen");
+                    megtalalva = true;
+                    break;
+                }
+            }
+            if (!megtalalva)
+            {
+                Console.WriteLine($"A {keresett} szám nincs a listában");
+
+
+            List<int> szamok = new List<int> { 4, 8, 15, 16, 23, 42 };
+            int keresett = 16;
+            bool megtalalva = false;
+            int index = 0;
+
+            foreach (int szam in szamok)
+            {
+                if (szam == keresett)
+                {
+                    Console.WriteLine($"A keresett szám: ({keresett}) megtalálva a(z) {index}. indexen");
+                    megtalalva = true;
+                    break;
+                }
+                index++;
+            }
+
+            if (!megtalalva)
+            {
+                Console.WriteLine($"A {keresett} szám nincs a listában");
+            }
+
+            List<int> szamok = new List<int> { 4, 8, 15, 16, 23, 42 };
+            int keresett = 16;
+            bool megtalalva = false;
+            int i = 0;
+
+            while (i < szamok.Count)
+            {
+                if (szamok[i] == keresett)
+                {
+                    Console.WriteLine($"A keresett szám: ({keresett}) megtalálva a(z) {i}. indexen");
+                    megtalalva = true;
+                    break;
+                }
+                i++;
+            }
+            if (!megtalalva)
+            {
+                Console.WriteLine($"A {keresett} szám nincs a listában");
+            }
+            List<int> szamok = new List<int> { 4, 8, 15, 16, 23, 42 };
+            int keresett = 16;
+            bool megtalalva = false;
+            int i = 0;
+
+            if (szamok.Count > 0)
+            {
+                do
+                {
+                    if (szamok[i] == keresett)
+                    {
+                        Console.WriteLine($"A keresett szám: ({keresett}) megtalálva a(z) {i}. indexen");
+                        megtalalva = true;
+                        break;
+                    }
+                    i++;
+                } while (i < szamok.Count);
+            }
+            if (!megtalalva)
+            {
+                Console.WriteLine($"A {keresett} szám nincs a listában");
+            }
+
+            List<int> szamok = new List<int> { 4, 8, 15, 16, 23, 42 };
+            int keresett = 16;
+
+            if (szamok.Contains(keresett))
+            {
+                Console.WriteLine($"A keresett szám ({keresett}) megtalálva a listában");
+            }
+            else
+            {
+                Console.WriteLine($"A {keresett} szám nincs a listában");
+            }*/
+            List<int> szamok = new List<int> { 4, 8, 15, 16, 23, 42 };
+            int keresett = 16;
+            int index = szamok.IndexOf(keresett);
+
+            if (index != -1)
+            {
+                Console.WriteLine($"A keresett szám: ({keresett}) megtalálva a(z) {index}. indexen");
+            }
+            else
+            {
+                Console.WriteLine($"A {keresett} szám nincs a listában");
+            }
 
 
         }
