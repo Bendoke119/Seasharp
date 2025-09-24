@@ -311,7 +311,7 @@ namespace fela1
             else
             {
                 Console.WriteLine($"A {keresett} szám nincs a listában");
-            }*/
+            }
             List<int> szamok = new List<int> { 4, 8, 15, 16, 23, 42 };
             int keresett = 16;
             int index = szamok.IndexOf(keresett);
@@ -324,9 +324,51 @@ namespace fela1
             {
                 Console.WriteLine($"A {keresett} szám nincs a listában");
             }
+            */
+            List<int> szamok = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8 };
+            List<int> parosszamok = new List<int>();
+            foreach (int i in szamok)
+            {
+                if (i % 2 == 0)
+                {
+                    parosszamok.Add(i);
+                }
+            }
+            Console.WriteLine("2-vel osztható számok:" + string.Join(",", parosszamok));
 
 
+            
+            Console.WriteLine("Adj meg  egy számot (1-7):");
+            int nap = int.Parse(Console.ReadLine());
+            switch (nap)
+            {
+                case 1:
+                    Console.WriteLine("Hétfő");
+                    break;
+                case 2:
+                    Console.WriteLine("Kedd");
+                    break;
+                case 3:
+                    Console.WriteLine("Szerda");
+                    break;
+                case 4:
+                    Console.WriteLine("Csütörtök");
+                    break;
+                case 5:
+                    Console.WriteLine("Péntek");
+                    break;
+                case 6:
+                    Console.WriteLine("Szombat");
+                    break;
+                case 7:
+                    Console.WriteLine("Vasárnap");
+                    break;
+            
+            }
         }
+
+
     }
 }
+
 
